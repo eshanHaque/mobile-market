@@ -35,15 +35,14 @@ const details = (mobileId) => {
 const detailsMobile = (specification) => {
     document.getElementById("mobile-details").innerHTML = ` <div class="card p-3 shadow-lg mb-4">
     <div><img class="mx-auto d-block" src="${specification.image}" alt=""></div>
-    <h3 class="text-center"></h3>
-    <h5 class="text-center"></h5>
-    <h5 class="text-center">realease</h5>
-    <h5 class="text-center">Feature</h5>
-    <h5 class="text-center">storage</h5>
-    <h5 class="text-center">displaysize</h5>
-    <h5 class="text-center">chipset</h5>
-    <h5 class="text-center">memory</h5>
-    <h5 class="text-center">sensors</h5>
+    <h3 class="text-center">${specification.name}</h3>
+    <h5 class="text-center">${specification.releaseDate}</h5>
+    <h5 class="text-center">Feature:</h5>
+    <h5 class="text-center">${specification.mainFeatures.storage}</h5>
+    <h5 class="text-center">${specification.mainFeatures.displaySize}</h5>
+    <h5 class="text-center">${specification.mainFeatures.chipSet}</h5>
+    <h5 class="text-center">${specification.mainFeatures.memory}</h5>
+    <h5 class="text-center">${specification.mainFeatures.sensors}</h5>
     <h5 class="text-center">waln</h5>
     <h5 class="text-center">bluetooth</h5>
     <h5 class="text-center">gps</h5>
