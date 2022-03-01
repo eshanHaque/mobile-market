@@ -30,10 +30,10 @@ const displayMobile = (mobiles) => {
     const div = document.createElement('div')
     div.classList.add('col-lg-4')
     div.innerHTML = `<div class="card p-3 shadow-lg mb-4">
-    <div><img class="mx-auto d-block" src="${mobile.image}" alt=""></div>
-    <h4 class="text-center fw-bold">${mobile.phone_name}</h4>
+    <div><img class="mx-auto d-block mt-4 mb-1 image-fix" src="${mobile.image}" alt=""></div>
+    <h4 class="text-center fw-bold mt-3 mb-2">${mobile.phone_name}</h4>
     <h5 class="text-center">${mobile.brand}</h5>
-    <div class="text-center"><button onclick="details('${mobile.slug}')" class="button-color" >Detailes</button></div>
+    <div class="text-center"><button onclick="details('${mobile.slug}')" class="btn btn-primary rounded button-color mt-3 mb-2" >Detailes</button></div>
     </div>`;
     displayParent.appendChild(div);
     }
@@ -50,6 +50,7 @@ const details = (mobileId) => {
 };
 
 const detailsMobile = (specification) => {
+    
 
     document.getElementById("mobile-details").innerHTML = ` <div class="card p-3 shadow-lg mb-4">
     <div><img class="mx-auto d-block" src="${specification.image}" alt=""></div>
@@ -62,4 +63,4 @@ const detailsMobile = (specification) => {
     <h5 class="text-center">Memory: <span class="ftr-font">${specification.mainFeatures.memory}</span></h5>
     <h5 class="text-center">Sensors: <span class="ftr-font">${specification.mainFeatures.sensors}</span></h5>
 </div>`;
-}
+};

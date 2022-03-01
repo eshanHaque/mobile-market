@@ -10,8 +10,12 @@
     color: tomato;
 }
 
+.image-fix{
+    width: 250px;
+}
+
 .button-color{
-    background-image: linear-gradient(rgba(37, 37, 231, 0.562), white);
+    /* background-color: rgba(49, 49, 185, 0.459); */
     font-family: 'Manrope', sans-serif;
 }
 .wrong {
