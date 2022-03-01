@@ -43,11 +43,12 @@ const detailsMobile = (specification) => {
     <h5 class="text-center">${specification.mainFeatures.chipSet}</h5>
     <h5 class="text-center">${specification.mainFeatures.memory}</h5>
     <h5 class="text-center">${specification.mainFeatures.sensors}</h5>
-    <h5 class="text-center">waln</h5>
-    <h5 class="text-center">bluetooth</h5>
-    <h5 class="text-center">gps</h5>
-    <h5 class="text-center">nfc</h5>
-    <h5 class="text-center">radio</h5>
-    <h5 class="text-center"></h5>
-</div>`
+    <h5 class="text-center others" >Others</h5>
+    <h5 class="text-center others" >${specification.wlan}</h5>
+    <h5 class="text-center others" >${specification.blutooth}</h5>
+    <h5 class="text-center others" >${specification.gps}</h5>
+    <h5 class="text-center others" >${specification.nfc}</h5>
+    <h5 class="text-center others" >${specification.Radio}</h5>
+    <h5 class="text-center others" >${specification.usb}</h5>
+</div>`;
 }
