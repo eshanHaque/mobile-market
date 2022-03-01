@@ -1,5 +1,8 @@
+// get search input 
 const mobilePhone = () => {
+    // clear previous load 
     document.getElementById("mobile-container").innerHTML="";
+
 
     const mobileInput = document.getElementById("input-feild").value;
 
@@ -7,9 +10,19 @@ const mobilePhone = () => {
 
     fetch(url)
         .then((res) => res.json())
-        .then((data) => displayMobile(data.data));
-}
+        .then((data) => {
+            if (data.data == false){
+                document.getElementById("wrong").style.display = "block";
+            }
+            else{
+                displayMobile(data.data);
+                document.getElementById("wrong").style.display = "none";
+            }
+        });
+};
 
+
+// get search result 
 const displayMobile = (mobiles) => {
     for(const mobile of mobiles){
         const displayParent = document.getElementById("mobile-container");
@@ -26,6 +39,8 @@ const displayMobile = (mobiles) => {
     }
 };
 
+
+// get details result 
 const details = (mobileId) => {
     const url =`https://openapi.programming-hero.com/api/phone/${mobileId}`;
 
