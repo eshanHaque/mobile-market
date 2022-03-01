@@ -33,7 +33,7 @@ const displayMobile = (mobiles) => {
     <div><img class="mx-auto d-block" src="${mobile.image}" alt=""></div>
     <h4 class="text-center">${mobile.phone_name}</h4>
     <h5 class="text-center">${mobile.brand}</h5>
-    <div class="text-center"><button onclick="details('${mobile.slug}')" class="btn-success" >Detailes</button></div>
+    <div class="text-center"><button onclick="details('${mobile.slug}')" class="button-color" >Detailes</button></div>
     </div>`;
     displayParent.appendChild(div);
     }
@@ -53,13 +53,13 @@ const detailsMobile = (specification) => {
 
     document.getElementById("mobile-details").innerHTML = ` <div class="card p-3 shadow-lg mb-4">
     <div><img class="mx-auto d-block" src="${specification.image}" alt=""></div>
-    <h3 class="text-center">${specification.name}</h3>
+    <h3 class="text-center mt-2 mb-1">${specification.name}</h3>
     <h5 class="text-center">${specification.releaseDate}</h5>
     <h5 class="text-center">Feature:</h5>
-    <h5 class="text-center">${specification.mainFeatures.storage}</h5>
-    <h5 class="text-center">${specification.mainFeatures.displaySize}</h5>
-    <h5 class="text-center">${specification.mainFeatures.chipSet}</h5>
-    <h5 class="text-center">${specification.mainFeatures.memory}</h5>
-    <h5 class="text-center">${specification.mainFeatures.sensors}</h5>
+    <h5 class="text-center">Storage: <span class="ftr-font">${specification.mainFeatures.storage}</span></h5>
+    <h5 class="text-center">Display Size: <span class="ftr-font">${specification.mainFeatures.displaySize}</span></h5>
+    <h5 class="text-center">Chip Set: <span class="ftr-font">${specification.mainFeatures.chipSet}</span></h5>
+    <h5 class="text-center">Memory: <span class="ftr-font">${specification.mainFeatures.memory}</span></h5>
+    <h5 class="text-center">Sensors: <span class="ftr-font">${specification.mainFeatures.sensors}</span></h5>
 </div>`;
 }

@@ -1,3 +1,19 @@
+/* font  */
+@import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
+
+.ftr-font{
+    font-family: 'Manrope', sans-serif;
+}
+
+.head-text{
+
+    color: tomato;
+}
+
+.button-color{
+    background-image: linear-gradient(rgba(37, 37, 231, 0.562), white);
+    font-family: 'Manrope', sans-serif;
+}
 .wrong {
     display: none;
 }
