@@ -1,4 +1,6 @@
 const mobilePhone = () => {
+    document.getElementById("mobile-container").innerHTML="";
+
     const mobileInput = document.getElementById("input-feild").value;
 
     const url = `https://openapi.programming-hero.com/api/phones?search=${mobileInput}`;
@@ -33,6 +35,7 @@ const details = (mobileId) => {
 };
 
 const detailsMobile = (specification) => {
+
     document.getElementById("mobile-details").innerHTML = ` <div class="card p-3 shadow-lg mb-4">
     <div><img class="mx-auto d-block" src="${specification.image}" alt=""></div>
     <h3 class="text-center">${specification.name}</h3>
@@ -43,12 +46,5 @@ const detailsMobile = (specification) => {
     <h5 class="text-center">${specification.mainFeatures.chipSet}</h5>
     <h5 class="text-center">${specification.mainFeatures.memory}</h5>
     <h5 class="text-center">${specification.mainFeatures.sensors}</h5>
-    <h5 class="text-center others" >Others</h5>
-    <h5 class="text-center others" >${specification.wlan}</h5>
-    <h5 class="text-center others" >${specification.blutooth}</h5>
-    <h5 class="text-center others" >${specification.gps}</h5>
-    <h5 class="text-center others" >${specification.nfc}</h5>
-    <h5 class="text-center others" >${specification.Radio}</h5>
-    <h5 class="text-center others" >${specification.usb}</h5>
 </div>`;
 }
